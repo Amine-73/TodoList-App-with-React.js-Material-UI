@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import SurfaceMission from "./SurfaceMission";
+import Container from "@mui/material/Container";
+import Input from "./Input";
+import { createTheme } from "@mui/material";
+import { orange, green } from "@mui/material/colors";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{ background: "#9fa8da", display: "flex", height: "100vh" }}
+    >
+      <Container
+        maxWidth="sm"
+        style={{
+          background: "#fff",
+          height: "auto",
+          margin: "100px auto",
+        }}
+      >
+        <SurfaceMission />
+        <Input />
+      </Container>
     </div>
   );
 }
