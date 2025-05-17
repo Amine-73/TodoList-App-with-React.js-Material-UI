@@ -3,6 +3,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { orange  } from '@mui/material/colors';
+import { Link } from 'react-router-dom';
 
 export default function ColorToggleButton() {
 
@@ -36,9 +37,9 @@ export default function ColorToggleButton() {
         aria-label="Platform"
         >
             
-        <ToggleButton theme={theme}  value="ios">غيرمنجز</ToggleButton>
-        <ToggleButton theme={theme} value="android">منجز</ToggleButton>
-        <ToggleButton theme={theme} value="web">الكل</ToggleButton>
+        <Link to={"/غيرمنجز"}><ToggleButton theme={theme}  value="ios">غيرمنجز</ToggleButton></Link>
+        <Link to={"/منجز"}><ToggleButton theme={theme} value="android">منجز</ToggleButton></Link>
+        <Link to={"/الكل"}><ToggleButton theme={theme} value="web">الكل</ToggleButton></Link>
         </ToggleButtonGroup>
     );
 }

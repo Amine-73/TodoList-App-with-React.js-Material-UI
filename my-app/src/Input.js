@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
 import InputBase from '@mui/material/InputBase';
 import Buttons from './Button';
-import { createTheme } from '@mui/material/styles';
-import { green } from '@mui/material/colors';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
     marginTop: theme.spacing(3),
@@ -42,20 +40,15 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 
 
 export default function CustomizedSelects() {
-  const [age, setAge] = React.useState('');
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
   return (
     <div style={{display:"flex"}}>
-        <div style={{display:"flex",fontSize:"border-box"}}>
+        <div>
             <Buttons/>
         </div>
         <div>
-            <FormControl sx={{ m: 1 }} variant="standard">
-                <InputLabel htmlFor="demo-customized-textbox" style={{fontSize:"25px"}}>عنوان المهام</InputLabel>
-                <BootstrapInput id="demo-customized-textbox"/>
-            </FormControl>
+          <Box sx={{ width: 500, maxWidth: '85%',marginLeft:"10px",marginTop:"29px" }}>
+              <TextField fullWidth label="عنوان المهمة" id="fullWidth" />
+          </Box>
         </div>
     </div>
   );

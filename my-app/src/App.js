@@ -2,14 +2,16 @@ import "./App.css";
 import SurfaceMission from "./SurfaceMission";
 import Container from "@mui/material/Container";
 import Input from "./Input";
-import { createTheme } from "@mui/material";
-import { orange, green } from "@mui/material/colors";
+import { Route, Routes } from "react-router-dom";
+import Post from "./Post";
 
 function App() {
   return (
+    <section style={{background: "#9fa8da",height:"100vh",maxHeight:"100vh"}}>
+    
     <div
       className="App"
-      style={{ background: "#9fa8da", display: "flex", height: "100vh" }}
+      style={{ display: "flex", height: "auto" }}
     >
       <Container
         maxWidth="sm"
@@ -20,9 +22,17 @@ function App() {
         }}
       >
         <SurfaceMission />
+        
+        <Routes>
+          <Route path="/الكل" element={<Post/>}/>
+          <Route path="/غيرمنجز" element={<h1> </h1>}/>
+          <Route path="/منجز" element={<h1> </h1>}/>
+        </Routes>
         <Input />
       </Container>
+      
     </div>
+    </section>
   );
 }
 

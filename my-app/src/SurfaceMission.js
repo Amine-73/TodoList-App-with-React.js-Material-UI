@@ -5,7 +5,7 @@ export default function SurfaceMission(){
             // background:"red",
             height:"auto",
             padding:"0 10px",
-            margin:"100px 0px"
+            margin:"10px 0px"
         }}>
         <h1 style={{fontSize:"50px"}}>مهامي</h1>
         <hr/>
